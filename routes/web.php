@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@getIndex')->name('home');
 
 Route::get('/login/spotify', 'AuthSpotifyController@spotifyLogin')->name('login.spotify');
 Route::get('/auth/spotify', 'AuthSpotifyController@spotifyCallback');
+
+Route::get('/result', 'SpotifyController@getResult')->name('result');

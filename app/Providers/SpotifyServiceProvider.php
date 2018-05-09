@@ -36,7 +36,8 @@ class SpotifyServiceProvider extends ServiceProvider
             );
 
             $scopes = [
-                'user-top-read'
+                'user-top-read',
+                'playlist-modify-public'
             ];
 
             if (session()->has('spotify_token')) {
