@@ -18,6 +18,8 @@
 <body>
   @yield('content')
 
+  @yield('before_scripts')
+
   <script src="{{ asset('js/app.js') }}"></script>
 
   @yield('scripts')

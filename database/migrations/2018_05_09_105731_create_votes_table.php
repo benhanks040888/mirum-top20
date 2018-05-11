@@ -20,6 +20,7 @@ class CreateVotesTable extends Migration
             $table->string('track_name');
             $table->string('track_artist');
             $table->text('track_data');
+            $table->integer('points')->nullable();
             $table->integer('position')->nullable();
             $table->timestamps();
         });

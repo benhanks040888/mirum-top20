@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -12,51 +14,64 @@ body {
   margin: 0;
 }
 
-.full-height {
-  height: 100vh;
+a {
+  color: #65D36E;
 }
 
-.flex-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+a:hover {
+  color: #3f8445;
 }
 
-.position-ref {
-  position: relative;
+[v-cloak] * {
+  display: none;
 }
 
-.top-right {
+[v-cloak]::before {
+  content: "loading\2026";
+}
+
+.box {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  display: block;
+  width: 100%;
+}
+
+.box {
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 0 rgba(10, 10, 10, 0.1);
+          box-shadow: 0 1px 0 rgba(10, 10, 10, 0.1);
+  border-radius: 0;
+}
+
+.box:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.flip-list-enter,
+.flip-list-leave-to {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.flip-list-leave-active {
+  opacity: 0;
+  -webkit-transition: opacity .2s, -webkit-transform 1s;
+  transition: opacity .2s, -webkit-transform 1s;
+  transition: opacity .2s, transform 1s;
+  transition: opacity .2s, transform 1s, -webkit-transform 1s;
   position: absolute;
-  right: 10px;
-  top: 18px;
 }
 
-.content {
-  text-align: center;
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
 }
 
-.title {
-  font-size: 84px;
-}
-
-.links > a {
-  color: #636b6f;
-  padding: 0 25px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.m-b-md {
-  margin-bottom: 30px;
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 
