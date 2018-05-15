@@ -69,3 +69,10 @@ a:hover {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+
+.what {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 100%;
+}
