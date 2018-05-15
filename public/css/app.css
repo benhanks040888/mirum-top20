@@ -1,15 +1,13 @@
 @charset "UTF-8";
-
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-html,
-body {
+html, body {
   color: #636b6f;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
   margin: 0;
 }
@@ -48,8 +46,7 @@ a:hover {
   margin-bottom: .5rem;
 }
 
-.flip-list-enter,
-.flip-list-leave-to {
+.flip-list-enter, .flip-list-leave-to {
   opacity: 0;
   -webkit-transform: translateY(30px);
           transform: translateY(30px);
@@ -64,14 +61,11 @@ a:hover {
   position: absolute;
 }
 
-.fade-enter-active,
-.fade-leave-active {
+.fade-enter-active, .fade-leave-active {
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
 }
 
-.fade-enter,
-.fade-leave-to {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
-

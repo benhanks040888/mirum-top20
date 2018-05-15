@@ -60,3 +60,28 @@ if ( ! function_exists('currentRouteName'))
     return Route::currentRouteName();
   }
 }
+
+
+if ( ! function_exists('getArrowIcon'))
+{
+  /**
+   * Get the URL to getArrowIcon folder
+   *
+   * @param  string  $path
+   * @return string
+   */
+  function getArrowIcon($curr, $prev)
+  {
+    if (empty($prev)) {
+      return 'has-text-warning fa-star';
+    }
+
+    if ($curr < $prev) {
+      return 'has-text-success fa-arrow-up';
+    } elseif ($curr > $prev) {
+      return 'has-text-danger fa-arrow-down';
+    } elseif ($curr == $prev) {
+      return 'has-text-info fa-arrows-alt-h';
+    }
+  }
+}

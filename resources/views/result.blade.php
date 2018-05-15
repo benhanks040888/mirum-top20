@@ -21,7 +21,7 @@
           @foreach ($your_top20_tracks as $index => $item)
             <div class="box">
               <div class="columns is-mobile">
-                <div class="column is-narrow has-text-grey has-text-centered" style="min-width: 45px;">
+                <div class="column is-narrow has-text-grey has-text-centered" style="min-width: 70px;">
                   <div class="is-size-5" style="color: #000">
                     <span>{{ $index + 1 }}</span>
                   </div>
@@ -50,7 +50,7 @@
           @foreach ($top20_tracks as $index => $item)
             <div class="box">
               <div class="columns is-mobile">
-                <div class="column is-narrow has-text-grey has-text-centered" style="min-width: 45px;">
+                <div class="column is-narrow has-text-grey has-text-centered" style="min-width: 70px;">
                   <div class="is-size-5" style="color: #000">
                     <span>{{ $index + 1 }}</span>
                   </div>
