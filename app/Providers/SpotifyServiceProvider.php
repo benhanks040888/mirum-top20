@@ -35,20 +35,21 @@ class SpotifyServiceProvider extends ServiceProvider
                 config('services.spotify.redirect')
             );
 
-            $scopes = [
-                'user-top-read',
-                'playlist-modify-public'
-            ];
+            // $scopes = [
+            //     'user-top-read',
+            //     'playlist-modify-public'
+            // ];
 
             if (session()->has('spotify_token')) {
                 $accessToken = session('spotify_token');
-            } else {
-                $session->requestCredentialsToken($session);
+            // } else {
+            //     get new token
+            //     $session->requestCredentialsToken();
     
-                $accessToken = $session->getAccessToken();
+            //     $accessToken = $session->getAccessToken();
+                $client->setAccessToken($accessToken);
             }
 
-            $client->setAccessToken($accessToken);
 
             return $client;
         });
