@@ -1,12 +1,6 @@
 @charset "UTF-8";
-.navbar-laravel {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
 html, body {
-  color: #636b6f;
+  color: #323334;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -75,4 +69,26 @@ a:hover {
   top: 15px;
   right: 15px;
   border-radius: 100%;
+}
+
+.level-left,
+.level-right {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.level-right {
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .level-left + .level-right {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    margin-top: 2rem;
+  }
 }

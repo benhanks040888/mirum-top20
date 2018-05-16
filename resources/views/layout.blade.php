@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ filemtime(public_path() . '/css/app.css') }}">
 
   @yield('styles')
 </head>
@@ -21,7 +21,7 @@
   @yield('before_scripts')
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="{{ asset('js/site.js') }}"></script>
+  <script src="{{ asset('js/site.js') }}?v={{ filemtime(public_path() . '/js/site.js') }}"></script>
 
   @yield('scripts')
 </body>
