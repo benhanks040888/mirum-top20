@@ -1,11 +1,8 @@
 <div class="sidebar">
   <h2 class="title is-3">Others' Top 20</h2>
 
-  <div class="content">
+  {{-- <div class="content">
     <p>View others' top 20 tracks</p>
-  </div>
-
-  @if ($items->count() == 0)
     <a class="button is-primary" href="{{ route('login.spotify') }}">
       <span class="icon is-small">
         <i class="fab fa-spotify"></i>
@@ -14,8 +11,8 @@
         Submit Your Top 20
       </span>
     </a>
-  @endif
-  
+  </div> --}}
+
   @if (currentRouteName() != 'home')
     <p><a href="{{ route('home') }}"><span class="icon"><i class="fas fa-music"></i></span> Mirum Top 20</a></p>
   @endif
